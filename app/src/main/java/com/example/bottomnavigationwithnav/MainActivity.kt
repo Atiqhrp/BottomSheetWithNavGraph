@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
                         navController?.navigate(R.id.idHomeFragment)
                         true
                     }
+
                     R.id.fragment_more -> {
                         // Handle Search item click
                         navController?.navigate(R.id.idMoreFragment)
