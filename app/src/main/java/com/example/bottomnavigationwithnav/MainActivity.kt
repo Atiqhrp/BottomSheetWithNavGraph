@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
 
         binding?.run {
             navController?.let { binding?.bottomNavView?.setupWithNavController(it) }
-
             bottomNavView.setOnNavigationItemSelectedListener { menuItem ->
                 when (menuItem.itemId) {
                     R.id.fragment_home -> {
