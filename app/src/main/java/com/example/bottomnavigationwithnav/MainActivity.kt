@@ -9,6 +9,12 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.bottomnavigationwithnav.databinding.ActivityMainBinding
 
+/**
+ * ${MainActivity}
+ * Created by Atiq Ur Rehman on ${9/13/2023}.
+ * Email: atiqurrehman90@gmail.com
+ * Organization: NineSol
+ */
 class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedListener {
 
     var binding: ActivityMainBinding? = null
@@ -31,14 +37,21 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
                 when (menuItem.itemId) {
                     R.id.fragment_home -> {
                         // Handle Home item click
-                        navController?.navigate(R.id.idHomeFragment)
+                        if (navController?.currentDestination?.id != R.id.idHomeFragment) {
+                            navController?.popBackStack()
+                            navController?.navigate(R.id.idHomeFragment)
+                        }
+//                        navController?.navigate(R.id.idHomeFragment)
                         true
                     }
 
                     R.id.fragment_more -> {
                         // Handle Search item click
-                        navController?.navigate(R.id.idMoreFragment)
-
+//                        navController?.navigate(R.id.idMoreFragment)
+                        if (navController?.currentDestination?.id != R.id.idMoreFragment) {
+                            navController?.popBackStack()
+                            navController?.navigate(R.id.idMoreFragment)
+                        }
                         true
                     }
 

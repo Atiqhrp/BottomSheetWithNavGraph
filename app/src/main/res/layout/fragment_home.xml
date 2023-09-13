@@ -5,13 +5,12 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/textClick"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="Home"
+        android:text="i am Home, Click me for next fragment"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
